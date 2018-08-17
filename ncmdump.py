@@ -3,6 +3,8 @@
 Created on Sun Jul 15 01:05:58 2018
 
 @author: Nzix
+
+@mender: FakeCode
 """
 
 import binascii
@@ -10,7 +12,7 @@ import struct
 import base64
 import json
 import os
-from Crypto.Cipher import AES
+from Cryptodome.Cipher import AES
 from mutagen import mp3, flac, id3
 
 def dump(file_path):

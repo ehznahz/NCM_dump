@@ -2,11 +2,18 @@
 
 ## 简介
 
-感激大佬的 [anonymous5l/ncmdump ](https://github.com/anonymous5l/ncmdump)项目，因好奇加密算法就用Python移植了下。自测发现转换出来的媒体文件都已包含媒体信息(包括专辑封面)，~~故未再实现原repo中的写tag操作~~，应issue要求还是补上了写tag操作。Python实现比C++慢不少，实用性不大，仅供学习交流，请勿传播扩散。
+本项目 fork 自大佬的移植 python 版本项目[nondanee/**ncmdump 在此非常感谢
+
+也非常感谢原 C++ 版本代码大佬的 [anonymous5l/ncmdump ](https://github.com/anonymous5l/ncmdump)项目，感谢源代码作者的 Walkman帮了大忙（大雾）
+
+如原作者描述 python 版本运行相对较慢 但是优势在于安装简单（原C++版本需要自行编译taglib相对操作较多）
+
+另：原python版本使用的是pycrypto库相对较老且在部分一体包中的实现相对较差 已替换使用相对较新兼容性较好的pycryptodomex（pycryptodome的共存版本）
+
 ## 依赖
 
 ```
-pip(3) install pycrypto mutagen
+pip(3) install pycryptodomex mutagen
 ```
 
 ## 使用
