@@ -2,7 +2,7 @@
 
 ## 简介
 
-本项目 fork 自大佬的移植 python 版本项目[nondanee/**ncmdump 在此非常感谢
+本项目 fork 自大佬的移植 python 版本项目[nondanee/ncmdump](https://github.com/nondanee/ncmdump) 在此非常感谢
 
 也非常感谢原 C++ 版本代码大佬的 [anonymous5l/ncmdump ](https://github.com/anonymous5l/ncmdump)项目，感谢源代码作者的 Walkman帮了大忙（大雾）
 
