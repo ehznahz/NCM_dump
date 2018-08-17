@@ -70,8 +70,18 @@ def dump(file_path):
     image_size = struct.unpack('<I', bytes(image_size))[0]
     image_data = f.read(image_size)
 
+    author_name = ""
     # media data
-    file_name = meta_data['artist'][0][0] + ' - ' + meta_data['musicName'] + '.' + meta_data['format']
+    if len(meta_data['artist']) == 1:
+        author_name = meta_data['artist'][0][0]
+    else:
+        for i in range(len(meta_data['artist'])):
+            if i == len(meta_data['artist']) - 1:
+                author_name += meta_data['artist'][i][0]
+            else:
+                author_name += meta_data['artist'][i][0]
+                author_name += ','
+    file_name = author_name + ' - ' + meta_data['musicName'] + '.' + meta_data['format']
     music_path = os.path.join(os.path.split(file_path)[0],file_name)
     m = open(music_path,'wb')
 
@@ -124,12 +134,12 @@ if __name__ == '__main__':
         files = [file_name for file_name in os.listdir('.') if os.path.splitext(file_name)[-1] == '.ncm']
 
     if not files:
-        print('please input file path!')
+        print('路径为空！输入文件路径！')
         
     for file_name in files:
         try:
             dump(file_name)
-            print(os.path.split(file_name)[-1])
+            print(os.path.split(file_name)[-1] + '已成功转换！')
         except Exception as e:
             print(e)
             pass
