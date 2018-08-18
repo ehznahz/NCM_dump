@@ -10,6 +10,8 @@
 
 另：原python版本使用的是pycrypto库相对较老且在部分一体包中的实现相对较差 已替换使用相对较新兼容性较好的pycryptodomex（pycryptodome的共存版本）
 
+仅供学习交流 请勿传播扩散
+
 ## 依赖
 
 - python 3.6 （3.*系列）
