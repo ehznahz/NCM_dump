@@ -15,8 +15,8 @@ import os
 from Cryptodome.Cipher import AES
 from mutagen import mp3, flac, id3
 
-def dump(file_path):
-
+def dumpfile(file_path):
+    # 预定义key
     core_key = binascii.a2b_hex("687A4852416D736F356B496E62617857")
     meta_key = binascii.a2b_hex("2331346C6A6B5F215C5D2630553C2728")
     unpad = lambda s : s[0:-(s[-1] if type(s[-1]) == int else ord(s[-1]))]
@@ -126,21 +126,4 @@ def dump(file_path):
     audio['artist'] = '/'.join([artist[0] for artist in meta_data['artist']])
     audio.save()
 
-if __name__ == '__main__':
-    import sys
-    if len(sys.argv) > 1:
-        files = sys.argv[1:]
-    else:
-        files = [file_name for file_name in os.listdir('.') if os.path.splitext(file_name)[-1] == '.ncm']
 
-    if not files:
-        print('路径为空！输入文件路径！')
-        
-    for file_name in files:
-        try:
-            dump(file_name)
-            print(os.path.split(file_name)[-1] + '已成功转换！')
-        except Exception as e:
-            print(e)
-            pass
-        
