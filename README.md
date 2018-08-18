@@ -12,6 +12,8 @@
 
 ## 依赖
 
+- python 3.6 （3.*系列）
+
 ```
 pip(3) install pycryptodomex mutagen
 ```
