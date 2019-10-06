@@ -121,6 +121,8 @@ def dumpfile(file_path):
         audio.save()
         audio = mp3.EasyMP3(music_path)
 
+    mp3.EasyMP3.ID3.RegisterTextKey('comment', 'COMM')
+    audio['comment'] = str(meta_data['musicId'])
     audio['title'] = meta_data['musicName']
     audio['album'] = meta_data['album']
     audio['artist'] = '/'.join([artist[0] for artist in meta_data['artist']])
