@@ -2,15 +2,8 @@
 
 ## 简介
 
-本项目 fork 自大佬的移植 python 版本项目[nondanee/ncmdump](https://github.com/nondanee/ncmdump) 在此非常感谢
-
-也非常感谢原 C++ 版本代码大佬的 [anonymous5l/ncmdump ](https://github.com/anonymous5l/ncmdump)项目，感谢源代码作者的 Walkman帮了大忙（大雾）
-
-如原作者描述 python 版本运行相对较慢 但是优势在于安装简单（原C++版本需要自行编译taglib相对操作较多）
-
-另：原python版本使用的是pycrypto库相对较老且在部分一体包中的实现相对较差 已替换使用相对较新兼容性较好的pycryptodomex（pycryptodome的共存版本）
-
-仅供学习交流 请勿传播扩散
+本项目 fork 自[FakeC0de/NCM_dump](https://github.com/FakeC0de/NCM_dump).
+与原版的唯一区别是在转换过程中会爱comment内写入歌曲的ID，以便我进行管理。
 
 ## 依赖
 
